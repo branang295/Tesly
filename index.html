@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesly</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+        #imagebox {
+            margin: 20px;
+        }
+        .futuristic-text {
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        button {
+            background-color: #ff4500; /* Red */
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #1e90ff; /* Blue */
+        }
+        button:active {
+            background-color: #ffd700; /* Yellow */
+        }
+    </style>
+</head>
+<body>
+    <div id="imagebox"></div>
+    <button onclick="randomTesla()">Random Tesla <span class="futuristic-text">(Futuristic Text)</span></button>
+
+    <script>
+        function randomTesla() {
+            const teslaImages = [
+                "https://lh5.googleusercontent.com/3-KtIgZggweGYCNWGJoaKpssjKKFRfs7zvR4bYiHR6l7Rux-44mufE8kLAkG8wK6faBHgix0jifTu6hrDO74EtvAZ5iNtobp8OD7S67I0f6Qf9VwIqE4S3w9-SeVYo7APA=w1280",
+                "https://lh5.googleusercontent.com/Qa099c1JcsxPApdQLJIvIVipemfD37T2kd0yPFRN-9NO1oJOUkzSGecxk9CJy094LmH-O0UGagiEK9tWrcwx-qmfqqxer0vY7KkwtcQNz8_cMRpqI6nK85bMLF0luVOR3g=w1280",
+                "https://lh6.googleusercontent.com/tBiV5JA6mJS8lh9czn7t86N2u5T4pKgPGYTRNVd1h9Q8fKdvvMA4iomYMERu7tbsnnhicx2DhWfEL56FjzkldsWtkwr8UECRGX1KLq3jzHfBi1EouP90IYOxvz8n-BkbiQ=w1280",
+                "https://lh5.googleusercontent.com/NTZaegBvuABQMz46KqUvDqKYS9gxvu5Am422OuT3-rrTLkeb6gUJJs-gLHVn9p84Oib8Vu-kj7yJ-GidTSrPCobXmrrCwtNhYjXILSPy1-sNdxFy5W7n3sVy4ChrhADf=w1280"
+            ];
+
+            const randomIndex = Math.floor(Math.random() * teslaImages.length);
+            const randomTeslaImage = teslaImages[randomIndex];
+
+            const imagebox = document.getElementById('imagebox');
+            imagebox.innerHTML = `<img src="${randomTeslaImage}" alt="Random Tesla Image">`;
+        }
+    </script>
+</body>
+</html>
